@@ -28,13 +28,13 @@ class DatabaseSettings(BaseSettings):
 class ServerSettings(BaseSettings):
     cors_urls: List[str] = Field(default=["localhost"], alias="CORS_URLS")
     #public_paths: List[str] = Field(default=["/"], alias="PUBLIC_PATHS")
-    api_secret_key: str = Field(default="RICAGO", alias="API_SECRET_KEY")
+    api_secret_key: str = Field(default="AIPROXYS", alias="API_SECRET_KEY")
     api_rate_limit: int = Field(default=1000, alias="API_RATE_LIMIT")
-    token_secret_key: str = Field(default="RICAGO", alias="TOKEN_SECRET_KEY")
+    token_secret_key: str = Field(default="AIPROXYS", alias="TOKEN_SECRET_KEY")
     token_expire_minutes: int = Field(default=60, alias="TOKEN_EXPIRE_MINUTES")
-    token_issuer: str = Field(default="RICAGO", alias="TOKEN_ISSUER")
+    token_issuer: str = Field(default="AIPROXYS", alias="TOKEN_ISSUER")
     token_algorithm: str = Field(default="HS256", alias="TOKEN_KEY_ALGORITHM")
-    api_name: str = Field(default="Ricago DataBridge API Server", alias="API_NAME")
+    api_name: str = Field(default="AIPROXYS Chatbot API Server", alias="API_NAME")
     version: str = Field(default="0.1.1", alias="VERSION")
     
     model_config = SettingsConfigDict(extra="ignore", env_file=".env", env_file_encoding="utf-8")

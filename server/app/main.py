@@ -3,7 +3,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
-from app.routes import emp_leaves_route
+from app.routes import emp_leaves_route, emp_details_route
 
 #from app.auth.auth import auth_middleware_call
 from app.configs.settings import settings
@@ -27,6 +27,7 @@ async def custom_http_exception_handler(request, exc):
     )
 
 app.include_router(emp_leaves_route.emp_leaves_route)
+app.include_router(emp_details_route.emp_details_route)
 
 origins = settings.server.cors_urls
 app.add_middleware(

@@ -15,6 +15,3 @@ class EmpLeavesService:
     async def getEmployeeLeaveBalance(self, tenant_id: str, emp_id: str) -> EmpLeavesDTO:
         emp_leaves = await self.repo.get_employee_leave_balance(tenant_id, emp_id)
         return emp_leaves
-
-   
-    
