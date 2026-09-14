@@ -13,6 +13,7 @@ class EmpDetails(BaseModel):
     company_name: Optional[str]= None
     joining_date: Optional[date] = None
     reporting_to: Optional[str]= None
+    manager_id: Optional[str]= None
 
 class EmpDetailsRequest(BaseModel):
     tenant_id: str

@@ -18,6 +18,7 @@ class EmpDetails(BaseModel):
     company_name = Column(String(255), nullable=True)
     joining_date = Column(Date, nullable=True)
     reporting_to = Column(String(255), nullable=True)
+    manager_id = Column(String(255), nullable=True)
 
     created_at = Column(DateTime, nullable=True)
     updated_at = Column(DateTime, nullable=True)

@@ -46,6 +46,7 @@ class EmpDetailsRepo:
                 company_name=existing.company_name or "",
                 joining_date=existing.joining_date,
                 reporting_to=existing.reporting_to or "",
+                manager_id=existing.manager_id or "",
             )
 
         # No record found
@@ -58,4 +59,5 @@ class EmpDetailsRepo:
             company_name="",
             joining_date=None,
             reporting_to="",
+            manager_id="",
         )
